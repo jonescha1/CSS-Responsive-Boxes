@@ -1,3 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 body {
-  background: blanchedalmond;
+  background: rgb(239, 238, 238);
+}
+
+.container {
+  height: 100vh;
+  margin: 0px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.container > * {
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  border-radius: 14px;
+}
+
+.a {
+  height: 30%;
+  flex: 1 1 100%;
+}
+
+.b {
+  height: 70%;
+  flex: 2;
+}
+
+.c {
+  height: 70%;
+  flex: 1;
+}
+
+@media screen and (max-width: 575px) {
+  .container {
+    display: block;
+  }
+  .container > * {
+    margin-bottom: 10px;
+  }
+  .c {
+    height: 30%;
+  }
 }
